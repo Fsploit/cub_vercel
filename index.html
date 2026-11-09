@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,14 +34,14 @@ button:hover{border-color:var(--cyan);transform:translateY(-2px)}button.primary{
 </style>
 </head>
 <body>
-<header class="top"><div class="brand">GROUP <span>04</span> / HAIRCUTTING</div><div class="tag">BEAUTY CARE • CLASS REPORT</div><div id="topcount" class="tag">01 / 28</div></header>
+<header class="top"><div class="brand">GROUP <span>04</span> / HAIRCUTTING</div><div class="tag">BEAUTY CARE • CLASS REPORT</div><div id="topcount" class="tag">01 / 31</div></header>
 <div class="progress"><div class="bar" id="bar"></div></div>
 <main class="stage" id="stage">
 <!-- slides are generated below -->
 </main>
 <nav class="controls" aria-label="Slide navigation">
 <button id="prev" aria-label="Previous page">← Previous</button>
-<div class="counter" id="counter">01 / 28</div>
+<div class="counter" id="counter">01 / 31</div>
 <button class="primary" id="next" aria-label="Next page">Next →</button>
 </nav>
 <div class="hint">Swipe left or right • Use ← → keys</div>
@@ -80,6 +79,7 @@ const slides = [
 {tag:"ANSWER 09–10",title:"Final answers",body:"9. Franchise.\n\n10. Niche / Specialty Shop.",points:["A franchise follows an established brand system.","A niche shop focuses on a specific service or group."],note:"That completes all 10 review questions!",q:"franchise salon specialty blow dry bar"},
 {tag:"CONCLUSION",title:"What did we learn?",body:"Haircutting combines creativity, geometry, and client care. It can lead to different careers, from apprentice to platform artist. Hair professionals can also build businesses such as independent salons, franchises, and specialty shops.",points:["Haircuts create the foundation of hairstyles.","There are many career paths in the industry.","Salon owners need both technical and business skills."],note:"Thank you for listening to our Group 4 report!",q:"professional hair salon team group"}
 ];
+const total=slides.length;
 const stage=document.getElementById('stage');
 const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 slides.forEach((s,i)=>{
@@ -94,7 +94,7 @@ slides.forEach((s,i)=>{
  '1560066984-138dadb4c035','1560066984-138dadb4c035','1521590832167-7bcbfaa6381f','1562322140-8baeececf3df',
  '1559599101-f09722fb4948','1521737711867-e3b97375f902','1516321318423-f06f85e504b3','1599351431202-1e0f0137899a',
  '1595476108010-b4d1f102b1b1','1503951914875-452162b0f3f1','1522337360788-8b13dee7a37e','1560066984-138dadb4c035'
- ][i])}?auto=format&fit=crop&w=1000&q=85`;
+ ][i % 28])}?auto=format&fit=crop&w=1000&q=85`;
  const img = s.img || defaultImg;
  el.innerHTML=`<div class="copy"><div class="eyebrow">${esc(s.tag)} • PAGE ${String(i+1).padStart(2,'0')}</div><h1>${esc(s.title)}</h1><p>${body}</p>${list}<div class="callout">${esc(s.note)}</div></div><div class="visual"><img src="${img}" alt="Example image for ${esc(s.title)}" loading="${i<2?'eager':'lazy'}" onerror="this.style.display='none'"><div class="caption"><span>VISUAL EXAMPLE</span><a class="google" target="_blank" rel="noopener" href="https://www.google.com/search?tbm=isch&q=${encodeURIComponent(s.q)}">Google Images ↗</a></div></div>`;
  stage.appendChild(el);
@@ -105,14 +105,14 @@ function show(n){
  if(animating||n===current||n<0||n>=pages.length)return;
  animating=true;const old=pages[current],next=pages[n];old.classList.remove('active');old.classList.add('exit-left');
  next.classList.remove('exit-left');next.classList.add('active');current=n;
- document.getElementById('counter').textContent=`${String(n+1).padStart(2,'0')} / 28`;
- document.getElementById('topcount').textContent=`${String(n+1).padStart(2,'0')} / 28`;
- document.getElementById('bar').style.width=`${(n+1)/28*100}%`;
- document.getElementById('prev').disabled=n===0;document.getElementById('next').textContent=n===27?'Finish ✓':'Next →';
+ document.getElementById('counter').textContent=`${String(n+1).padStart(2,'0')} / ${String(total).padStart(2,'0')}`;
+ document.getElementById('topcount').textContent=`${String(n+1).padStart(2,'0')} / ${String(total).padStart(2,'0')}`;
+ document.getElementById('bar').style.width=`${(n+1)/total*100}%`;
+ document.getElementById('prev').disabled=n===0;document.getElementById('next').textContent=n===total-1?'Finish ✓':'Next →';
  setTimeout(()=>{old.classList.remove('exit-left');animating=false},500);
 }
 document.getElementById('prev').onclick=()=>show(current-1);
-document.getElementById('next').onclick=()=>current===27?show(0):show(current+1);
+document.getElementById('next').onclick=()=>current===total-1?show(0):show(current+1);
 document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();show(current+1)}if(e.key==='ArrowLeft')show(current-1)});
 let startX=0,startY=0;
 stage.addEventListener('touchstart',e=>{startX=e.changedTouches[0].clientX;startY=e.changedTouches[0].clientY},{passive:true});
@@ -121,4 +121,3 @@ document.getElementById('prev').disabled=true;
 </script>
 </body>
 </html>
-
