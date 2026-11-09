@@ -1,707 +1,124 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Improper Waste Management Presentation</title>
-    <!-- SEO & Vercel Preview Metadata -->
-    <meta name="description" content="Interactive presentation report on Improper Waste Management with clean vectors, key information extraction, and smooth slide transitions.">
-    <meta property="og:title" content="Improper Waste Management Presentation">
-    <meta property="og:description" content="An interactive presentation on the effects, background, and rationale regarding improper waste management.">
-    <meta property="og:type" content="website">
-
-    <!-- External CDNs with HTTPS and cross-origin security -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            user-select: none;
-        }
-
-        /* Slide base and transitions */
-        .slide {
-            display: none;
-            opacity: 0;
-            transform: scale(0.98) translateY(10px);
-            transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            will-change: transform, opacity;
-        }
-
-        /* Fully visible static state */
-        .slide.active {
-            display: flex;
-            opacity: 1;
-            transform: scale(1) translateY(0);
-        }
-
-        /* Entrance and Exit Animation States */
-        .slide.enter-next {
-            display: flex;
-            animation: slideEnterRight 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
-        .slide.enter-prev {
-            display: flex;
-            animation: slideEnterLeft 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
-        .slide.exit-next {
-            display: flex;
-            animation: slideExitLeft 0.35s ease forwards;
-        }
-
-        .slide.exit-prev {
-            display: flex;
-            animation: slideExitRight 0.35s ease forwards;
-        }
-
-        @keyframes slideEnterRight {
-            0% {
-                opacity: 0;
-                transform: translateX(40px) scale(0.96);
-            }
-            100% {
-                opacity: 1;
-                transform: translateX(0) scale(1);
-            }
-        }
-
-        @keyframes slideEnterLeft {
-            0% {
-                opacity: 0;
-                transform: translateX(-40px) scale(0.96);
-            }
-            100% {
-                opacity: 1;
-                transform: translateX(0) scale(1);
-            }
-        }
-
-        @keyframes slideExitLeft {
-            0% {
-                opacity: 1;
-                transform: translateX(0) scale(1);
-            }
-            100% {
-                opacity: 0;
-                transform: translateX(-40px) scale(0.96);
-            }
-        }
-
-        @keyframes slideExitRight {
-            0% {
-                opacity: 1;
-                transform: translateX(0) scale(1);
-            }
-            100% {
-                opacity: 0;
-                transform: translateX(40px) scale(0.96);
-            }
-        }
-
-        /* Clean subtle animations */
-        @keyframes floatSlow {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-8px) rotate(1deg); }
-        }
-
-        @keyframes pulseGlow {
-            0%, 100% { opacity: 0.4; transform: scale(1); }
-            50% { opacity: 0.7; transform: scale(1.05); }
-        }
-
-        @keyframes scanline {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(1000%); }
-        }
-
-        .animate-float {
-            animation: floatSlow 6s ease-in-out infinite;
-        }
-
-        .animate-pulse-glow {
-            animation: pulseGlow 4s ease-in-out infinite;
-        }
-
-        /* Custom scrollbars */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: rgba(0,0,0,0.03);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: rgba(16, 185, 129, 0.3);
-            border-radius: 999px;
-        }
-
-        /* Highlight Cards */
-        .key-badge {
-            transition: all 0.3s ease;
-        }
-        .key-badge:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.15);
-        }
-
-        /* SVG Viewpoint Ground Graphic */
-        .perspective-ground {
-            perspective: 800px;
-        }
-        .ground-plane {
-            transform: rotateX(60deg) translateY(-20px);
-            transform-style: preserve-3d;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090d18">
+<title>Haircutting & Careers — Group 4</title>
+<style>
+:root{--bg:#080c16;--panel:#111a2b;--panel2:#17243a;--cyan:#63e6ff;--purple:#a78bfa;--muted:#a9b6ca;--white:#f4f7ff}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:var(--bg);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,Arial;overflow:hidden}
+body{background:radial-gradient(circle at 80% 10%,#172c4b 0,transparent 32%),radial-gradient(circle at 5% 90%,#241b48 0,transparent 30%),var(--bg)}
+.top{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;border-bottom:1px solid #ffffff16;background:#080c16bb;backdrop-filter:blur(14px);position:relative;z-index:5}
+.brand{font-weight:900;letter-spacing:2px}.brand span{color:var(--cyan)}.tag{color:var(--muted);font-size:12px}
+.progress{height:3px;background:#ffffff13}.bar{height:100%;width:3.57%;background:linear-gradient(90deg,var(--cyan),var(--purple));transition:width .45s}
+.stage{height:calc(100dvh - 132px);display:grid;place-items:center;padding:22px 5vw;perspective:1200px}
+.slide{width:min(1100px,100%);height:min(690px,100%);display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;background:linear-gradient(145deg,#142139eF,#0e1728f2);border:1px solid #ffffff1c;border-radius:28px;padding:clamp(22px,4vw,54px);box-shadow:0 25px 90px #0008;position:absolute;opacity:0;transform:translateX(70px) rotateY(-5deg) scale(.97);pointer-events:none;transition:opacity .38s ease,transform .48s cubic-bezier(.2,.8,.2,1)}
+.slide.active{opacity:1;transform:translateX(0) rotateY(0) scale(1);pointer-events:auto;position:relative}
+.slide.exit-left{opacity:0;transform:translateX(-70px) rotateY(5deg) scale(.97)}
+.copy{min-width:0}.eyebrow{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:15px}
+h1{font-size:clamp(30px,5vw,58px);line-height:1.02;margin:0 0 18px;letter-spacing:-1.8px}
+p{color:#d5deed;line-height:1.7;font-size:clamp(14px,1.4vw,17px);margin:0 0 16px}
+ul{padding-left:20px;color:#d5deed;line-height:1.75;font-size:15px}li::marker{color:var(--cyan)}
+.callout{margin-top:20px;border-left:3px solid var(--purple);background:#a78bfa12;padding:13px 16px;border-radius:0 12px 12px 0;color:#e5ddff;font-size:14px}
+.visual{min-width:0}.visual img{width:100%;height:clamp(210px,34vw,370px);object-fit:cover;border-radius:20px;border:1px solid #ffffff25;box-shadow:0 15px 45px #0007;background:#1b2940}
+.caption{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:12px;color:var(--muted);font-size:12px}
+.google{color:var(--cyan);text-decoration:none;border:1px solid #63e6ff55;padding:8px 11px;border-radius:9px;white-space:nowrap}.google:hover{background:#63e6ff18}
+.controls{height:65px;display:flex;align-items:center;justify-content:center;gap:18px}
+button{border:1px solid #ffffff26;background:#142139;color:var(--white);padding:11px 18px;border-radius:12px;font-weight:700;cursor:pointer;transition:.2s}
+button:hover{border-color:var(--cyan);transform:translateY(-2px)}button.primary{background:linear-gradient(100deg,#22c8e8,#8b78ee);color:#07111d;border:0}
+.counter{font-size:13px;color:var(--muted);min-width:76px;text-align:center;font-variant-numeric:tabular-nums}
+.hint{position:fixed;bottom:7px;right:18px;color:#8292aa;font-size:11px}
+@media(max-width:760px){.top{height:55px;padding:0 18px}.tag{display:none}.stage{height:calc(100dvh - 118px);padding:12px}.slide{height:100%;grid-template-columns:1fr;grid-template-rows:auto  minmax(160px, .75fr);gap:12px;padding:20px;border-radius:20px;overflow:auto;align-content:start}.visual img{height:clamp(155px,25vh,230px)}h1{font-size:clamp(27px,8vw,40px);margin-bottom:10px}.eyebrow{margin-bottom:9px}p{font-size:14px;line-height:1.55;margin-bottom:9px}ul{font-size:13px;line-height:1.5;margin-top:7px;margin-bottom:8px}.callout{margin-top:10px;padding:10px 12px;font-size:13px}.caption{margin-top:7px}.controls{height:63px;gap:9px}button{padding:10px 13px}.hint{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between overflow-x-hidden relative">
-
-    <!-- Background Decor (Eye-level horizon ambient glow) -->
-    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
-        <div class="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-emerald-500/10 blur-[120px] rounded-full animate-pulse-glow"></div>
-        <div class="absolute top-1/2 -left-32 w-80 h-80 bg-teal-500/10 blur-[100px] rounded-full"></div>
-        <div class="absolute bottom-0 right-0 w-96 h-96 bg-emerald-600/10 blur-[120px] rounded-full"></div>
-        
-        <!-- Subtle Horizontal Perspective Line representing Eye Level Viewpoint -->
-        <div class="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-emerald-500/15 to-transparent"></div>
-    </div>
-
-    <!-- Top Header -->
-    <header class="relative z-20 px-6 py-4 border-b border-slate-800/80 bg-slate-950/70 backdrop-blur-md flex items-center justify-between">
-        <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shadow-inner">
-                <i data-lucide="recycle" class="w-5 h-5 animate-spin-slow"></i>
-            </div>
-            <div>
-                <span class="text-xs font-semibold text-emerald-400 tracking-wider uppercase">Improper Waste Management</span>
-                <h1 class="text-sm font-bold text-slate-200">By Ray Xander, Vince Montuerto, Jorish</h1>
-            </div>
-        </div>
-
-        <!-- Slide Progress Indicators -->
-        <div class="hidden sm:flex items-center gap-2 bg-slate-900/80 border border-slate-800 px-4 py-2 rounded-full">
-            <span id="slide-number" class="text-xs font-bold text-emerald-400">01</span>
-            <span class="text-xs text-slate-500">/</span>
-            <span class="text-xs text-slate-400">04</span>
-            <div class="w-24 h-1.5 bg-slate-800 rounded-full ml-2 overflow-hidden">
-                <div id="progress-bar" class="h-full bg-gradient-to-r from-emerald-500 to-teal-400 transition-all duration-300 w-1/4"></div>
-            </div>
-        </div>
-
-        <!-- Quick Info Extraction Modal Toggle -->
-        <button id="modal-btn" onclick="toggleModal()" class="flex items-center gap-2 text-xs font-medium bg-emerald-500/10 border border-emerald-500/30 hover:bg-emerald-500/20 text-emerald-300 px-3.5 py-2 rounded-xl transition">
-            <i data-lucide="zap" class="w-4 h-4 text-emerald-400"></i>
-            <span class="hidden md:inline">Key Takeaways</span>
-        </button>
-    </header>
-
-    <!-- Main Presentation Viewport (Eye-Level Focused Container) -->
-    <main class="relative z-10 flex-1 flex items-center justify-center p-4 sm:p-6 lg:p-10 max-w-7xl mx-auto w-full">
-        
-        <!-- SLIDE 1: Title & Introduction -->
-        <section class="slide active w-full flex-col lg:flex-row items-center gap-8 lg:gap-12">
-            <div class="flex-1 space-y-6 text-left">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
-                    <i data-lucide="book-open" class="w-3.5 h-3.5"></i> Section 01: The Topic
-                </div>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
-                    What is <span class="bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent">Improper Waste Management?</span>
-                </h2>
-                <p class="text-slate-300 text-base sm:text-lg leading-relaxed bg-slate-900/40 p-5 rounded-2xl border border-slate-800/80">
-                    It refers to the <strong class="text-emerald-300">improper disposal and handling of waste</strong>, such as throwing garbage on streets, in rivers, and in other public places instead of putting it in the proper trash bins.
-                </p>
-
-                <!-- Information Extraction Highlight Box -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                    <div class="key-badge bg-slate-900/80 border border-slate-800 p-3.5 rounded-xl flex items-start gap-3">
-                        <div class="p-2 rounded-lg bg-red-500/10 text-red-400">
-                            <i data-lucide="trash-2" class="w-5 h-5"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xs font-bold text-slate-300">Uncontrolled Disposal</h4>
-                            <p class="text-xs text-slate-400 mt-0.5">Littering in streets, waterways & public hubs.</p>
-                        </div>
-                    </div>
-                    <div class="key-badge bg-slate-900/80 border border-slate-800 p-3.5 rounded-xl flex items-start gap-3">
-                        <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
-                            <i data-lucide="check-circle-2" class="w-5 h-5"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xs font-bold text-slate-300">Neglected Bins</h4>
-                            <p class="text-xs text-slate-400 mt-0.5">Bypassing designated waste containers.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Eye-Level Clean Vector Graphics Side -->
-            <div class="flex-1 w-full max-w-md lg:max-w-none flex justify-center">
-                <div class="relative w-full max-w-lg aspect-square bg-gradient-to-b from-slate-900/90 to-slate-950/90 border border-slate-800 rounded-3xl p-6 shadow-2xl flex flex-col justify-between overflow-hidden group">
-                    <div class="absolute inset-0 bg-emerald-500/5 group-hover:bg-emerald-500/10 transition-all duration-500"></div>
-                    
-                    <!-- SVG Vector Eye-Level Viewpoint Graphic -->
-                    <div class="relative z-10 w-full h-full flex flex-col justify-center items-center">
-                        <svg viewBox="0 0 400 300" class="w-full h-auto drop-shadow-xl" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Background Horizon Line (Eye-Level View) -->
-                            <line x1="0" y1="180" x2="400" y2="180" stroke="#334155" stroke-dasharray="4 4" stroke-width="1.5" />
-                            <text x="330" y="173" fill="#64748B" font-size="10" font-weight="600">EYE-LEVEL</text>
-
-                            <!-- Clean Vector Trash Bin (Proper Disposal Concept) -->
-                            <g transform="translate(240, 110)">
-                                <rect x="0" y="30" width="70" height="100" rx="10" fill="#059669" />
-                                <rect x="-5" y="20" width="80" height="15" rx="5" fill="#10B981" />
-                                <rect x="25" y="10" width="30" height="12" rx="3" fill="#047857" />
-                                <!-- Recycling Icon Vector -->
-                                <path d="M 35 55 L 45 70 L 25 70 Z" fill="none" stroke="#A7F3D0" stroke-width="3" stroke-linejoin="round"/>
-                                <path d="M 35 85 L 25 70 L 45 70 Z" fill="none" stroke="#A7F3D0" stroke-width="3" stroke-linejoin="round"/>
-                            </g>
-
-                            <!-- Improper Littering (Red cross indicator) -->
-                            <g transform="translate(60, 150)">
-                                <!-- Water/River Vector -->
-                                <path d="M -40 60 Q 30 40 100 60 T 240 60" fill="none" stroke="#0284C7" stroke-width="8" opacity="0.6"/>
-                                <!-- Trash Bag Vector -->
-                                <path d="M 30 15 C 20 0, 10 0, 0 15 C -10 30, -5 50, 15 50 C 35 50, 40 30, 30 15 Z" fill="#64748B" />
-                                <!-- Plastic Bottle -->
-                                <rect x="70" y="25" width="14" height="30" rx="3" fill="#38BDF8" transform="rotate(25 70 25)" opacity="0.8"/>
-                                <!-- Red Alert Warning Ring -->
-                                <circle cx="35" cy="25" r="35" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-dasharray="5 3" class="animate-spin-slow" />
-                                <path d="M 23 13 L 47 37 M 47 13 L 23 37" stroke="#EF4444" stroke-width="3" stroke-linecap="round"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SLIDE 2: Background & Environmental Effects -->
-        <section class="slide w-full flex-col lg:flex-row items-center gap-8 lg:gap-12">
-            <div class="flex-1 space-y-6 text-left">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
-                    <i data-lucide="layers" class="w-3.5 h-3.5"></i> Section 02: Background
-                </div>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
-                    Environmental Problem in <span class="text-emerald-400">Our Community</span>
-                </h2>
-                <p class="text-slate-300 text-sm sm:text-base leading-relaxed bg-slate-900/40 p-5 rounded-2xl border border-slate-800/80">
-                    Improper waste management is one of the most widespread environmental challenges today. Many individuals discard trash carelessly without considering the immediate and long-term consequences on our surrounding ecosystem.
-                </p>
-
-                <!-- 4 Highlighted Effects Extraction Grid -->
-                <div class="grid grid-cols-2 gap-3">
-                    <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-2xl hover:border-emerald-500/40 transition group">
-                        <div class="w-9 h-9 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-2 group-hover:scale-110 transition">
-                            <i data-lucide="cloud-off" class="w-5 h-5"></i>
-                        </div>
-                        <h4 class="text-sm font-bold text-slate-200">Environmental Pollution</h4>
-                        <p class="text-xs text-slate-400 mt-1">Air, soil, and water degradation.</p>
-                    </div>
-
-                    <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-2xl hover:border-emerald-500/40 transition group">
-                        <div class="w-9 h-9 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-2 group-hover:scale-110 transition">
-                            <i data-lucide="waves" class="w-5 h-5"></i>
-                        </div>
-                        <h4 class="text-sm font-bold text-slate-200">Clogged Drainages</h4>
-                        <p class="text-xs text-slate-400 mt-1">Blocked waterways and gutters.</p>
-                    </div>
-
-                    <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-2xl hover:border-emerald-500/40 transition group">
-                        <div class="w-9 h-9 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-2 group-hover:scale-110 transition">
-                            <i data-lucide="cloud-rain" class="w-5 h-5"></i>
-                        </div>
-                        <h4 class="text-sm font-bold text-slate-200">Severe Flooding</h4>
-                        <p class="text-xs text-slate-400 mt-1">Urban overflows during storms.</p>
-                    </div>
-
-                    <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-2xl hover:border-emerald-500/40 transition group">
-                        <div class="w-9 h-9 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center mb-2 group-hover:scale-110 transition">
-                            <i data-lucide="activity" class="w-5 h-5"></i>
-                        </div>
-                        <h4 class="text-sm font-bold text-slate-200">Disease Outbreaks</h4>
-                        <p class="text-xs text-slate-400 mt-1">Bacterial & mosquito vectors.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Eye-Level Vector: Impact Diagram -->
-            <div class="flex-1 w-full max-w-md lg:max-w-none flex justify-center">
-                <div class="relative w-full max-w-lg aspect-square bg-slate-900/80 border border-slate-800 rounded-3xl p-6 shadow-2xl flex flex-col justify-center items-center overflow-hidden">
-                    
-                    <svg viewBox="0 0 400 320" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="drainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#1E293B" />
-                                <stop offset="100%" stop-color="#0F172A" />
-                            </linearGradient>
-                        </defs>
-
-                        <!-- Eye Level Horizon -->
-                        <line x1="20" y1="120" x2="380" y2="120" stroke="#334155" stroke-dasharray="3 3"/>
-                        
-                        <!-- Culvert / Drainage Eye-Level Perspective View -->
-                        <circle cx="200" cy="180" r="85" fill="url(#drainGrad)" stroke="#475569" stroke-width="6"/>
-                        <circle cx="200" cy="180" r="65" fill="#020617" />
-                        
-                        <!-- Garbage Blocking the Pipe -->
-                        <g transform="translate(160, 150)">
-                            <!-- Accumulated plastic debris vector -->
-                            <ellipse cx="40" cy="45" rx="45" ry="25" fill="#EF4444" opacity="0.3" class="animate-pulse"/>
-                            <rect x="10" y="30" width="25" height="15" rx="3" fill="#64748B" transform="rotate(15 10 30)" />
-                            <rect x="30" y="20" width="30" height="20" rx="4" fill="#0EA5E9" transform="rotate(-20 30 20)" />
-                            <circle cx="50" cy="40" r="10" fill="#F59E0B" />
-                            <!-- Water backing up -->
-                            <path d="M -20 30 Q 20 10 80 30" fill="none" stroke="#38BDF8" stroke-width="4" opacity="0.8"/>
-                        </g>
-
-                        <!-- Danger Vector Callout -->
-                        <g transform="translate(200, 50)">
-                            <rect x="-60" y="-18" width="120" height="32" rx="16" fill="#DC2626" opacity="0.9"/>
-                            <text x="0" y="2" fill="#FFFFFF" font-size="11" font-weight="700" text-anchor="middle">DRAINAGE BLOCKED</text>
-                        </g>
-                    </svg>
-
-                    <div class="mt-2 text-center">
-                        <span class="text-xs font-semibold text-emerald-400">Cause & Effect Chain</span>
-                        <p class="text-xs text-slate-400">Garbage Accumulation → Drainage Obstruction → Local Flooding</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SLIDE 3: Reasons for Choosing the Topic -->
-        <section class="slide w-full flex-col lg:flex-row items-center gap-8 lg:gap-12">
-            <div class="flex-1 space-y-6 text-left">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
-                    <i data-lucide="target" class="w-3.5 h-3.5"></i> Section 03: Rationale
-                </div>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
-                    Why We Chose <span class="text-emerald-400">This Topic</span>
-                </h2>
-                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                    We selected this critical topic because improper waste disposal directly impacts our immediate surroundings and public health. Action begins with community awareness.
-                </p>
-
-                <div class="space-y-3">
-                    <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 flex items-start gap-4">
-                        <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
-                            <i data-lucide="mega-phone" class="w-4 h-4"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-sm font-bold text-slate-200">Raise Awareness</h4>
-                            <p class="text-xs text-slate-400 mt-1">Educating communities on correct waste disposal techniques, segregation, and reduction.</p>
-                        </div>
-                    </div>
-
-                    <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 flex items-start gap-4">
-                        <div class="w-8 h-8 rounded-lg bg-teal-500/10 text-teal-400 flex items-center justify-center shrink-0 mt-0.5">
-                            <i data-lucide="refresh-cw" class="w-4 h-4"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-sm font-bold text-slate-200">Promote Recycling & Reduction</h4>
-                            <p class="text-xs text-slate-400 mt-1">Encouraging sustainable habits to minimize overall waste generation at the source.</p>
-                        </div>
-                    </div>
-
-                    <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 flex items-start gap-4">
-                        <div class="w-8 h-8 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center shrink-0 mt-0.5">
-                            <i data-lucide="users" class="w-4 h-4"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-sm font-bold text-slate-200">Foster Civic Responsibility</h4>
-                            <p class="text-xs text-slate-400 mt-1">Inspiring individuals to become proactive guardians of a cleaner, healthier environment.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Eye-Level Vector: Community Action Vector -->
-            <div class="flex-1 w-full max-w-md lg:max-w-none flex justify-center">
-                <div class="relative w-full max-w-lg aspect-square bg-slate-900/80 border border-slate-800 rounded-3xl p-6 shadow-2xl flex flex-col justify-center items-center overflow-hidden">
-                    <svg viewBox="0 0 400 300" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Horizontal Eye Level Perspective line -->
-                        <line x1="0" y1="200" x2="400" y2="200" stroke="#334155" stroke-dasharray="4 4" />
-                        
-                        <!-- Clean Eco-City Eye Level Backdrop -->
-                        <path d="M 50 200 L 50 120 L 90 120 L 90 200 Z" fill="#1E293B" />
-                        <path d="M 100 200 L 100 90 L 150 90 L 150 200 Z" fill="#0F172A" />
-                        <path d="M 260 200 L 260 110 L 310 110 L 310 200 Z" fill="#1E293B" />
-                        
-                        <!-- Trees / Clean Environment Vectors -->
-                        <g transform="translate(180, 130)">
-                            <circle cx="20" cy="30" r="30" fill="#10B981" opacity="0.8"/>
-                            <rect x="15" y="50" width="10" height="20" fill="#047857"/>
-                        </g>
-                        
-                        <!-- People / Community Vector Icons -->
-                        <g transform="translate(120, 160)">
-                            <circle cx="15" cy="10" r="8" fill="#38BDF8"/>
-                            <path d="M 5 35 C 5 22 25 22 25 35" fill="#38BDF8"/>
-                        </g>
-                        <g transform="translate(230, 160)">
-                            <circle cx="15" cy="10" r="8" fill="#A7F3D0"/>
-                            <path d="M 5 35 C 5 22 25 22 25 35" fill="#A7F3D0"/>
-                        </g>
-
-                        <!-- Central Recycle Emblem glowing -->
-                        <circle cx="200" cy="100" r="35" fill="#047857" opacity="0.2" class="animate-ping"/>
-                        <circle cx="200" cy="100" r="28" fill="#059669" />
-                        <path d="M 192 95 L 200 85 L 208 95 M 200 85 L 200 112" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-
-                    <div class="mt-2 text-center">
-                        <span class="text-xs font-semibold text-emerald-400">Target Vision</span>
-                        <p class="text-xs text-slate-400">Sustainable, Clean & Healthy Community</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SLIDE 4: Information Extraction & Topic Keywords -->
-        <section class="slide w-full flex-col items-center text-center max-w-5xl mx-auto space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
-                <i data-lucide="key" class="w-3.5 h-3.5"></i> Section 04: Information Extraction
-            </div>
-
-            <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
-                Core <span class="bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent">Keywords & Key Concepts</span>
-            </h2>
-
-            <!-- Extraction Matrix Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full text-left pt-2">
-                
-                <!-- Main Keyword Extraction Card -->
-                <div class="p-5 rounded-2xl bg-slate-900/90 border border-emerald-500/30 hover:border-emerald-500/60 transition space-y-3">
-                    <div class="flex items-center gap-2.5 text-emerald-400 font-bold text-sm">
-                        <i data-lucide="tag" class="w-4 h-4"></i>
-                        <span>Primary Keyword & Definition</span>
-                    </div>
-                    <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800">
-                        <span class="inline-block px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-300 font-extrabold text-sm mb-1">
-                            "Improper Waste Management"
-                        </span>
-                        <p class="text-xs text-slate-300 leading-relaxed mt-1">
-                            The primary topic describing careless disposal of trash on streets, rivers, and public places instead of proper receptacles.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Critical Impact Sentences -->
-                <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-emerald-500/40 transition space-y-3">
-                    <div class="flex items-center gap-2.5 text-teal-400 font-bold text-sm">
-                        <i data-lucide="quote" class="w-4 h-4"></i>
-                        <span>Key Sentence: Environmental Impact</span>
-                    </div>
-                    <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800">
-                        <p class="text-xs text-slate-300 italic leading-relaxed">
-                            "This can cause pollution, clogged drainage systems, flooding, and the spread of diseases."
-                        </p>
-                        <span class="inline-block text-[10px] text-teal-400/80 font-semibold mt-2">
-                            • Highlights immediate hazards in our community.
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Solution Keywords Card -->
-                <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-emerald-500/40 transition space-y-3">
-                    <div class="flex items-center gap-2.5 text-cyan-400 font-bold text-sm">
-                        <i data-lucide="check-check" class="w-4 h-4"></i>
-                        <span>Key Action Keywords</span>
-                    </div>
-                    <div class="flex flex-wrap gap-2 pt-1">
-                        <span class="px-3 py-1 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-semibold">Proper Disposal</span>
-                        <span class="px-3 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs font-semibold">Recycling</span>
-                        <span class="px-3 py-1 rounded-lg bg-teal-500/10 border border-teal-500/20 text-teal-300 text-xs font-semibold">Waste Reduction</span>
-                        <span class="px-3 py-1 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs font-semibold">Community Responsibility</span>
-                    </div>
-                </div>
-
-                <!-- Rationale Sentence Extraction -->
-                <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-emerald-500/40 transition space-y-3">
-                    <div class="flex items-center gap-2.5 text-emerald-400 font-bold text-sm">
-                        <i data-lucide="target" class="w-4 h-4"></i>
-                        <span>Key Sentence: Core Purpose</span>
-                    </div>
-                    <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800">
-                        <p class="text-xs text-slate-300 italic leading-relaxed">
-                            "We want to raise awareness... and help create a cleaner and healthier environment for everyone."
-                        </p>
-                        <span class="inline-block text-[10px] text-emerald-400/80 font-semibold mt-2">
-                            • Establishes the primary goal of the presentation.
-                        </span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Navigation Controls Bottom Bar -->
-    <footer class="relative z-20 px-6 py-4 border-t border-slate-800/80 bg-slate-950/80 backdrop-blur-md flex items-center justify-between">
-        <div class="flex items-center gap-2">
-            <button id="prev-btn" onclick="changeSlide(-1)" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:bg-slate-800 text-slate-300 disabled:opacity-40 disabled:cursor-not-allowed transition font-semibold text-xs">
-                <i data-lucide="chevron-left" class="w-4 h-4"></i> Previous
-            </button>
-            <button id="next-btn" onclick="changeSlide(1)" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition font-bold text-xs shadow-lg shadow-emerald-500/20">
-                Next <i data-lucide="chevron-right" class="w-4 h-4"></i>
-            </button>
-        </div>
-
-        <div class="text-xs text-slate-400 hidden sm:block">
-            Use <kbd class="px-2 py-1 bg-slate-900 border border-slate-800 rounded-md text-slate-300">←</kbd> <kbd class="px-2 py-1 bg-slate-900 border border-slate-800 rounded-md text-slate-300">→</kbd> keys to navigate
-        </div>
-    </footer>
-
-    <!-- Key Information Extraction Modal -->
-    <div id="info-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-lg w-full p-6 shadow-2xl relative space-y-5 animate-in fade-in zoom-in duration-200">
-            <button onclick="toggleModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white p-1 rounded-lg">
-                <i data-lucide="x" class="w-5 h-5"></i>
-            </button>
-
-            <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
-                <div class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400">
-                    <i data-lucide="file-text" class="w-5 h-5"></i>
-                </div>
-                <div>
-                    <h3 class="text-base font-bold text-white">Extracted Topic Summary</h3>
-                    <p class="text-xs text-slate-400">Quick Reference Sheet for Presentation</p>
-                </div>
-            </div>
-
-            <div class="space-y-4 max-h-[60vh] overflow-y-auto pr-1">
-                <div class="space-y-1">
-                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">1. Topic</span>
-                    <p class="text-xs text-slate-300 bg-slate-950/60 p-3 rounded-xl border border-slate-800/80">
-                        <strong>Improper Waste Management:</strong> Improper disposal and handling of waste (throwing garbage on streets, rivers, public places instead of proper trash bins).
-                    </p>
-                </div>
-
-                <div class="space-y-1">
-                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">2. Background & Effects</span>
-                    <p class="text-xs text-slate-300 bg-slate-950/60 p-3 rounded-xl border border-slate-800/80">
-                        A major environmental issue caused by careless garbage disposal. Key impacts include:
-                        <br>• Pollution
-                        <br>• Clogged Drainage Systems
-                        <br>• Flooding
-                        <br>• Spread of Diseases
-                    </p>
-                </div>
-
-                <div class="space-y-1">
-                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">3. Primary Objectives</span>
-                    <p class="text-xs text-slate-300 bg-slate-950/60 p-3 rounded-xl border border-slate-800/80">
-                        • Raise public awareness on waste disposal & recycling.<br>
-                        • Reduce overall waste production.<br>
-                        • Encourage individual responsibility for a clean, safe, and healthy community.
-                    </p>
-                </div>
-            </div>
-
-            <button onclick="toggleModal()" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-200 transition">
-                Close Summary
-            </button>
-        </div>
-    </div>
-
-    <script>
-        // State management
-        let currentSlide = 0;
-        let isAnimating = false;
-        const slides = document.querySelectorAll('.slide');
-        const slideNumEl = document.getElementById('slide-number');
-        const progressBar = document.getElementById('progress-bar');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-
-        // Initialize Lucide Icons
-        lucide.createIcons();
-
-        // Update presentation viewport UI
-        function updateSlideUI() {
-            // Update Slide Number Display
-            const formattedIndex = String(currentSlide + 1).padStart(2, '0');
-            slideNumEl.textContent = formattedIndex;
-
-            // Update Progress Bar Width
-            const progress = ((currentSlide + 1) / slides.length) * 100;
-            progressBar.style.width = `${progress}%`;
-
-            // Button States
-            prevBtn.disabled = currentSlide === 0;
-            
-            if (currentSlide === slides.length - 1) {
-                nextBtn.innerHTML = 'Finish <i data-lucide="check" class="w-4 h-4"></i>';
-            } else {
-                nextBtn.innerHTML = 'Next <i data-lucide="chevron-right" class="w-4 h-4"></i>';
-            }
-            lucide.createIcons();
-        }
-
-        // Change slide with Entrance and Exit Effects
-        function changeSlide(direction) {
-            if (isAnimating) return;
-
-            const targetIndex = currentSlide + direction;
-            if (targetIndex < 0 || targetIndex >= slides.length) return;
-
-            isAnimating = true;
-
-            const oldSlide = slides[currentSlide];
-            const newSlide = slides[targetIndex];
-
-            // Determine direction class
-            const exitClass = direction > 0 ? 'exit-next' : 'exit-prev';
-            const enterClass = direction > 0 ? 'enter-next' : 'enter-prev';
-
-            // Remove active class and apply Exit animation to current slide
-            oldSlide.classList.remove('active');
-            oldSlide.classList.add(exitClass);
-
-            setTimeout(() => {
-                oldSlide.classList.remove(exitClass);
-
-                // Prepare and play entrance animation on target slide
-                newSlide.classList.add(enterClass);
-
-                setTimeout(() => {
-                    newSlide.classList.remove(enterClass);
-                    newSlide.classList.add('active');
-                    currentSlide = targetIndex;
-                    updateSlideUI();
-                    isAnimating = false;
-                }, 350);
-
-            }, 300);
-        }
-
-        // Keyboard Navigation Support
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight' || e.key === 'Space') {
-                changeSlide(1);
-            } else if (e.key === 'ArrowLeft') {
-                changeSlide(-1);
-            } else if (e.key === 'Escape') {
-                const modal = document.getElementById('info-modal');
-                if (!modal.classList.contains('hidden')) {
-                    toggleModal();
-                }
-            }
-        });
-
-        // Toggle Key Information Drawer Modal
-        function toggleModal() {
-            const modal = document.getElementById('info-modal');
-            modal.classList.toggle('hidden');
-        }
-
-        // Initial setup call
-        slides[0].classList.add('active');
-        updateSlideUI();
-    </script>
+<body>
+<header class="top"><div class="brand">GROUP <span>04</span> / HAIRCUTTING</div><div class="tag">BEAUTY CARE • CLASS REPORT</div><div id="topcount" class="tag">01 / 28</div></header>
+<div class="progress"><div class="bar" id="bar"></div></div>
+<main class="stage" id="stage">
+<!-- slides are generated below -->
+</main>
+<nav class="controls" aria-label="Slide navigation">
+<button id="prev" aria-label="Previous page">← Previous</button>
+<div class="counter" id="counter">01 / 28</div>
+<button class="primary" id="next" aria-label="Next page">Next →</button>
+</nav>
+<div class="hint">Swipe left or right • Use ← → keys</div>
+<script>
+const slides = [
+{tag:"WELCOME / GROUP 4",title:"Haircutting & Careers",body:"Welcome to our report! Today, we will explore the basics of haircutting, the careers available in the industry, and the businesses that hair professionals can build.",points:["Understanding haircutting","Discovering career opportunities","Exploring salon business models"],note:"Let’s unlock a new skill: becoming a hair professional.",q:"hair stylist haircut salon"},
+{tag:"TODAY'S PLAN",title:"What will we learn?",body:"This report is divided into three main topics. First, we will understand haircutting. Next, we will discover different career paths. Finally, we will look at salon business opportunities.",points:["Topic 1 — Introduction to Haircutting","Topic 2 — Career Opportunities","Topic 3 — Business Opportunities"],note:"By the end, we should understand how haircutting can become a profession.",q:"hairdressing scissors salon workstation"},
+{tag:"QUICK REVIEW",title:"A little review",body:"Before moving to our new topic, let’s remember our previous lesson about nail care.",points:["Question: Which nail-polish layer helps protect the nail plate and helps prevent staining?","Answer: The base coat."],note:"The base coat is applied before colored nail polish.",q:"nail base coat manicure"},
+{tag:"TOPIC 1 • INTRODUCTION",title:"What is haircutting?",body:"Haircutting is the process of shaping hair by cutting different lengths at specific angles. It combines creativity, technique, and knowledge to create a style that suits the client.",points:["It changes the length and shape of hair.","It is the foundation of many hairstyles.","It requires skill and careful planning."],note:"Example: A stylist cuts long hair into a layered hairstyle.",q:"haircutting stylist cutting hair scissors"},
+{tag:"THE FOUNDATION",title:"Why is a haircut important?",body:"A good haircut creates the basic shape of a hairstyle. Styling products and blow-drying can improve the look, but the haircut provides the structure.",points:["Creates the hairstyle’s shape.","Makes hair easier to manage.","Helps the style look neat even with simple styling."],note:"Example: Layers can add movement and shape to long hair.",q:"layered haircut before after hair"},
+{tag:"THE SCIENCE",title:"The science of angles",body:"Haircutting uses angles and geometry. Stylists lift or position sections of hair at different angles to control the shape, weight, and layers of the haircut.",points:["Different angles create different results.","Hair position affects the final shape.","Practice helps stylists control their technique."],note:"Example: A blunt cut keeps a strong, even outline; layers create movement.",q:"haircutting elevation angles diagram"},
+{tag:"CUSTOMIZATION",title:"Understanding face shapes",body:"A stylist considers the client’s face shape, hair type, and personal preference before recommending a haircut. The goal is to choose a style that makes the client feel comfortable and confident.",points:["Round","Oval","Square","Heart-shaped"],note:"Example: A client may choose soft layers or a side fringe to get the look they prefer.",q:"face shapes hairstyle guide chart", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTGxNqecyYoqBj9D4vC5j8SnbS-_qydJN_2iqP65JXeks0WOs74Dm-KwWJ&s=10"},
+{tag:"CLIENT EXPERIENCE",title:"The psychology of a haircut",body:"A haircut can affect how a person feels about their appearance. Listening carefully and understanding the client’s wishes helps create a positive salon experience.",points:["Ask what the client wants.","Explain what styles may work.","Respect the client’s choices.","Help the client feel comfortable."],note:"Example: A client feels more confident after receiving the haircut they requested.",q:"happy client hair salon haircut"},
+{tag:"TOPIC 2 • CAREERS",title:"Career opportunities",body:"Haircutting offers different career paths. People can begin as trainees, develop specialist skills, work independently, or teach others.",points:["Apprentice / Junior Stylist","Senior Stylist","Barber","Color Specialist","Freelance Stylist","Platform Artist"],note:"Each career has different responsibilities and skills.",q:"hair stylist barber hair colorist professionals"},
+{tag:"CAREER 01",title:"Apprentice / Junior Stylist",body:"An apprentice is a beginner who learns salon routines and develops basic skills under the guidance of experienced professionals.",points:["Assists with shampooing.","Keeps the work area clean.","Prepares tools and supplies.","Observes experienced stylists."],note:"Example: A trainee practices customer service and learns how a salon works.",q:"hair salon apprentice shampoo assistant"},
+{tag:"CAREER 02",title:"Senior Stylist",body:"A senior stylist has experience and can handle a wider range of services. They work with clients, recommend styles, and perform haircuts and styling.",points:["Consults with clients.","Performs haircuts and blowouts.","Builds regular client relationships.","May guide junior staff."],note:"Example: A regular client books an appointment with their preferred stylist.",q:"professional senior hair stylist cutting hair"},
+{tag:"CAREER 03",title:"Barber",body:"A barber specializes in short hairstyles and grooming, often including fades, beard trimming, and moustache shaping.",points:["Uses clippers and scissors.","Creates different fade styles.","Trims and shapes facial hair.","Maintains clean tools and equipment."],note:"Example: A barber gives a client a low fade haircut.",q:"barber fade haircut beard trim"},
+{tag:"CAREER 04",title:"Color Specialist",body:"A color specialist focuses on changing and maintaining hair color. This work requires color knowledge, careful consultation, and safe product use.",points:["Applies highlights and other color services.","Plans color combinations.","Follows product instructions.","Checks hair condition and client needs."],note:"Example: A colorist creates subtle highlights or helps correct an unwanted hair color.",q:"hair colorist highlights balayage salon"},
+{tag:"CAREER 05",title:"Freelance Stylist",body:"A freelance stylist works independently instead of being employed at one salon. They may travel to clients or work at special events.",points:["Brings tools and supplies to appointments.","May style hair for weddings and proms.","Manages bookings and schedules.","Builds a personal client base."],note:"Example: A mobile stylist travels to a hotel to style a wedding party.",q:"mobile freelance bridal hairstylist wedding"},
+{tag:"CAREER 06",title:"Platform Artist",body:"A platform artist is an experienced professional who demonstrates techniques, teaches other stylists, or represents beauty brands at events.",points:["Demonstrates haircutting techniques.","Teaches workshops or classes.","Creates educational content.","May work with professional brands."],note:"Example: A stylist gives a live haircut demonstration at a beauty event.",q:"hair stylist stage demonstration hair show"},
+{tag:"CAREER COMPARISON",title:"Choosing a career path",body:"These careers have different areas of focus. Some involve general salon services, while others specialize in barbering, coloring, mobile services, or education.",points:["Beginner: Apprentice","Experienced salon worker: Senior Stylist","Specialist: Barber or Colorist","Independent worker: Freelance Stylist","Educator: Platform Artist"],note:"A person can continue learning and move into different roles over time.",q:"hairdressing career salon barber colorist"},
+{tag:"TOPIC 3 • BUSINESS",title:"Business opportunities",body:"Hair professionals may eventually start or manage their own businesses. A business owner must provide good service while also managing money, supplies, staff, and customers.",points:["Independent Salon","Franchise Salon","Niche / Specialty Shop"],note:"Each business model has its own advantages and challenges.",q:"modern hair salon interior business"},
+{tag:"BUSINESS MODEL 01",title:"Independent salon",body:"An independent salon is created and managed by its owner. The owner chooses the salon name, design, services, and business approach.",points:["Advantage: More creative control.","Advantage: The owner builds their own brand.","Challenge: The owner must attract customers.","Challenge: The owner handles business costs."],note:"Example: A local salon opened under the owner’s own name.",q:"independent small hair salon interior"},
+{tag:"BUSINESS MODEL 02",title:"Franchise salon",body:"An franchise salon operates using an established company’s brand and business system. The owner follows the brand’s rules and pays fees according to the agreement.",points:["Advantage: Customers may already know the brand.","Advantage: The business has an existing system.","Challenge: Less freedom to change the brand.","Challenge: Franchise fees and rules apply."],note:"Example: A salon branch operating under a recognized salon brand.",q:"hair salon franchise branded interior"},
+{tag:"BUSINESS MODEL 03",title:"Niche / Specialty shop",body:"A niche shop focuses on one specific service or customer group instead of offering every type of salon service.",points:["Blow-dry bar: washing and styling hair.","Kids’ salon: services designed for children.","Specialty shop: focuses on a particular service."],note:"Example: A blow-dry bar helps clients prepare their hair for an event.",q:"blow dry bar salon interior"},
+{tag:"BUSINESS MANAGEMENT",title:"The reality of ownership",body:"Owning a salon involves more than cutting hair. Owners must make decisions and keep the business organized every day.",points:["Manage supplies and inventory.","Pay rent and utility bills.","Schedule workers and appointments.","Track income and expenses.","Maintain cleanliness and customer service."],note:"Example: A salon owner checks shampoo supplies before placing an order.",q:"salon owner managing hair salon inventory"},
+{tag:"LET'S REVIEW",title:"The Stylist Economy Audit",body:"It is time to check what we learned. Write your answers on paper. Try to answer each question before looking at the answer on the next page.",points:["There are 10 review questions.","Write the exact career, concept, or business term.","Check your answers after each question."],note:"Ready? Let’s begin!",q:"student classroom quiz notebook"},
+{tag:"QUESTION 01–02",title:"Check your knowledge",body:"1. What subject involving degrees and angles is a foundation of haircutting?\n\n2. What feature should a stylist analyze to help choose a suitable haircut?",points:["Think about the science behind cutting hair.","Think about the client’s facial features."],note:"Answers are on the next page.",q:"haircutting angle geometry face shape chart"},
+{tag:"ANSWER 01–02",title:"The answers",body:"1. Geometry (math and angles).\n\n2. Face shape.",points:["Geometry helps explain haircutting angles.","Face shape is one factor considered during consultation."],note:"Keep going — there are eight more questions!",q:"haircutting geometry diagram face shape"},
+{tag:"QUESTION 03–05",title:"Career questions",body:"3. What is the entry-level career where a beginner learns and assists in a salon?\n\n4. Which professional specializes in fades and facial-hair grooming?\n\n5. Who specializes in hair coloring and highlights?",points:["One is a beginner role.","One focuses on grooming.","One focuses on hair color."],note:"Answers are on the next page.",q:"salon apprentice barber hair colorist"},
+{tag:"ANSWER 03–05",title:"The answers",body:"3. Apprentice / Junior Stylist.\n\n4. Barber.\n\n5. Color Specialist / Colorist.",points:["Apprentices learn salon basics.","Barbers specialize in grooming.","Colorists focus on hair color services."],note:"Three questions left in the review!",q:"apprentice stylist barber colorist"},
+{tag:"QUESTION 06–08",title:"Career questions",body:"6. Which stylist travels to clients for weddings and events?\n\n7. Which professional teaches techniques or demonstrates on stage?\n\n8. Which business is built from scratch by its owner?",points:["Think of mobile work.","Think of an educator or demonstrator.","Think of a business with its own brand."],note:"Answers are on the next page.",q:"freelance bridal stylist hair educator independent salon"},
+{tag:"ANSWER 06–08",title:"The answers",body:"6. Freelance / Mobile Stylist.\n\n7. Platform Artist.\n\n8. Independent Salon.",points:["Freelance stylists travel to clients.","Platform artists teach and demonstrate.","Independent salons create their own brand."],note:"Only two questions remain!",q:"mobile hairstylist hair educator salon"},
+{tag:"QUESTION 09–10",title:"Final questions",body:"9. What business model uses an established company’s brand and system?\n\n10. What type of business focuses on one service, such as a blow-dry bar?",points:["One uses an existing brand.","One specializes in a particular service."],note:"Final answers are on the next page.",q:"franchise salon blow dry bar"},
+{tag:"ANSWER 09–10",title:"Final answers",body:"9. Franchise.\n\n10. Niche / Specialty Shop.",points:["A franchise follows an established brand system.","A niche shop focuses on a specific service or group."],note:"That completes all 10 review questions!",q:"franchise salon specialty blow dry bar"},
+{tag:"CONCLUSION",title:"What did we learn?",body:"Haircutting combines creativity, geometry, and client care. It can lead to different careers, from apprentice to platform artist. Hair professionals can also build businesses such as independent salons, franchises, and specialty shops.",points:["Haircuts create the foundation of hairstyles.","There are many career paths in the industry.","Salon owners need both technical and business skills."],note:"Thank you for listening to our Group 4 report!",q:"professional hair salon team group"}
+];
+const stage=document.getElementById('stage');
+const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+slides.forEach((s,i)=>{
+ const el=document.createElement('section');el.className='slide'+(i===0?' active':'');el.setAttribute('aria-label',`Page ${i+1}`);
+ const list=s.points?.length?`<ul>${s.points.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'';
+ const body=esc(s.body).replace(/\n\n/g,'<br><br>').replace(/\n/g,'<br>');
+ const defaultImg = `https://images.unsplash.com/photo-${([
+ '1503951914875-452162b0f3f1','1562322140-8baeececf3df','1604654894610-df63bc536371','1522337360788-8b13dee7a37e',
+ '1595476108010-b4d1f102b1b1','1599351431202-1e0f0137899a','1593702295094-aea9c2a7b4f6','1521590832167-7bcbfaa6381f',
+ '1560869713-7d0a29430803','1621605815971-fbc98d665033','1503951914875-452162b0f3f1','1599351431202-1e0f0137899a',
+ '1522337360788-8b13dee7a37e','1527799820374-dcf8d9d4a388','1562322140-8baeececf3df','1559599101-f09722fb4948',
+ '1560066984-138dadb4c035','1560066984-138dadb4c035','1521590832167-7bcbfaa6381f','1562322140-8baeececf3df',
+ '1559599101-f09722fb4948','1521737711867-e3b97375f902','1516321318423-f06f85e504b3','1599351431202-1e0f0137899a',
+ '1595476108010-b4d1f102b1b1','1503951914875-452162b0f3f1','1522337360788-8b13dee7a37e','1560066984-138dadb4c035'
+ ][i])}?auto=format&fit=crop&w=1000&q=85`;
+ const img = s.img || defaultImg;
+ el.innerHTML=`<div class="copy"><div class="eyebrow">${esc(s.tag)} • PAGE ${String(i+1).padStart(2,'0')}</div><h1>${esc(s.title)}</h1><p>${body}</p>${list}<div class="callout">${esc(s.note)}</div></div><div class="visual"><img src="${img}" alt="Example image for ${esc(s.title)}" loading="${i<2?'eager':'lazy'}" onerror="this.style.display='none'"><div class="caption"><span>VISUAL EXAMPLE</span><a class="google" target="_blank" rel="noopener" href="https://www.google.com/search?tbm=isch&q=${encodeURIComponent(s.q)}">Google Images ↗</a></div></div>`;
+ stage.appendChild(el);
+});
+let current=0,animating=false;
+const pages=[...document.querySelectorAll('.slide')];
+function show(n){
+ if(animating||n===current||n<0||n>=pages.length)return;
+ animating=true;const old=pages[current],next=pages[n];old.classList.remove('active');old.classList.add('exit-left');
+ next.classList.remove('exit-left');next.classList.add('active');current=n;
+ document.getElementById('counter').textContent=`${String(n+1).padStart(2,'0')} / 28`;
+ document.getElementById('topcount').textContent=`${String(n+1).padStart(2,'0')} / 28`;
+ document.getElementById('bar').style.width=`${(n+1)/28*100}%`;
+ document.getElementById('prev').disabled=n===0;document.getElementById('next').textContent=n===27?'Finish ✓':'Next →';
+ setTimeout(()=>{old.classList.remove('exit-left');animating=false},500);
+}
+document.getElementById('prev').onclick=()=>show(current-1);
+document.getElementById('next').onclick=()=>current===27?show(0):show(current+1);
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();show(current+1)}if(e.key==='ArrowLeft')show(current-1)});
+let startX=0,startY=0;
+stage.addEventListener('touchstart',e=>{startX=e.changedTouches[0].clientX;startY=e.changedTouches[0].clientY},{passive:true});
+stage.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-startX,dy=e.changedTouches[0].clientY-startY;if(Math.abs(dx)>55&&Math.abs(dx)>Math.abs(dy)*1.2)show(current+(dx<0?1:-1))},{passive:true});
+document.getElementById('prev').disabled=true;
+</script>
 </body>
 </html>
+
